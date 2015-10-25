@@ -1,0 +1,18 @@
+{
+  "name": "FullMean_doodle_chat",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "latest",
+    "cookie-parser": ">= 1.3.2",
+    "ejs": "^1.0.0",
+    "express": "~4.2.0",
+    "express-session": ">= 1.6.1",
+    "method-override": ">= 2.0.2",
+    "mongoose": "^4.1.12",
+    "morgan": ">= 1.1.1",
+    "passport": ">= 0.0.0",
+    "passport-facebook": ">= 0.0.0",
+    "passport-google-oauth": "^0.2.0",
+    "socket.io": "^1.3.7"
+  }
+}

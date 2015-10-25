@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DooChat</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	</head>
+	<body>
+		<% if (!user) { %>
+			<h2>Welcome! Please log in.</h2>
+		<% } else { %>
+			<h2>Hello, <%= user.displayName %>.</h2>
+		<% } %>
+
+	</body>
+</html>
