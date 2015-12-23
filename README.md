@@ -4,6 +4,6 @@
 
 ![Drawing Pad](https://d2p9ez1wat05y7.cloudfront.net/portfolio_assets/100990/pictures/1450750132/original.png)
 
-![Chat room](https://hired.com/list/frank-sun-fremont-ca/portfolio_assets/100991)
+![Chat room](https://d2p9ez1wat05y7.cloudfront.net/portfolio_assets/100991/pictures/1450750152/original.png)
 
 
