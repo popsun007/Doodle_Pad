@@ -9,8 +9,7 @@ var express = require('express'),
     session = require('express-session'),
     bodyParser = require("body-parser"),
     cookieParser = require("cookie-parser"),
-    methodOverride = require('method-override'),
-    port = Number(process.env.PORT || 8888);
+    methodOverride = require('method-override');
 
 var FACEBOOK_APP_ID = "651789438302199";
 var FACEBOOK_APP_SECRET = "e8c1db2aa54683a2ba893b4442df4bf8";
@@ -117,7 +116,7 @@ require('./server/config/socketIo.js')(io);
 
 
 
-http.listen(port, function(){
+http.listen(process.env.PORT || 8888, function(){
   console.log("chat with doodle pad on port 8888");
 });
 
