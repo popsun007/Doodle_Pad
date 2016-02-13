@@ -39,7 +39,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new FacebookStrategy({
     clientID: FACEBOOK_APP_ID,
     clientSecret: FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:8888/auth/facebook/callback"
+    callbackURL: "https://doodle-pad.herokuapp.com/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
@@ -61,7 +61,7 @@ passport.use(new FacebookStrategy({
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:8888/auth/google/callback"
+    callbackURL: "https://doodle-pad.herokuapp.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
@@ -91,7 +91,7 @@ app.set('view engine', 'ejs');
 app.use(logger("combined"));
 app.use(cookieParser());
 app.use(methodOverride());
-app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true }));
+// app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true }));
 // app.use(session({ secret: 'keyboard cat' }));
 // Initialize Passport!  Also use passport.session() middleware, to support
 // persistent login sessions (recommended).
@@ -116,7 +116,7 @@ require('./server/config/socketIo.js')(io);
 
 
 
-http.listen(process.env.PORT || 8888, function(){
+http.listen(process.env.PORT || 8080, function(){
   console.log("chat with doodle pad on port 8888");
 });
 
