@@ -13,7 +13,6 @@ myApp.controller('MessageController', function($scope, MessagesFactory){
 	$scope.limit = 4;
 	MessagesFactory.get_history(function(data)
 	{
-		// console.log(data);
 		$scope.messages = data;
 	});
 
