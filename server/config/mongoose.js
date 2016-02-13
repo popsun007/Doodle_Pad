@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 // require file-system so that we can load, read, require all of the model files
 var fs = require('fs');
 // connect to the database
-mongoose.connect('mongodb://localhost/FullMean_Doodle');
+mongoose.connect('mongodb://doodlepad:heihei2015@ds061375.mongolab.com:61375/doodlepad');
 // specify the path to all of the models
 var models_path = __dirname + '/../models';
 
