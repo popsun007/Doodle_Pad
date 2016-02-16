@@ -37,9 +37,9 @@ passport.deserializeUser(function(obj, done) {
 //   credentials (in this case, an accessToken, refreshToken, and Facebook
 //   profile), and invoke a callback with a user object.
 passport.use(new FacebookStrategy({
-    clientID: FACEBOOK_APP_ID,
-    clientSecret: FACEBOOK_APP_SECRET,
-    callbackURL: "https://mydoodlepads.com/auth/facebook/callback"
+      clientID:     process.env.FACEBOOK_ID || 'id',
+      clientSecret: process.env.FACEBOOK_SECRET || 'secret',
+      callbackURL:  '/auth/facebook/callback'
   },
   function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
