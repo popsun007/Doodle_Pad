@@ -91,7 +91,7 @@ app.set('view engine', 'ejs');
 app.use(logger("combined"));
 app.use(cookieParser());
 app.use(methodOverride());
-// app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true }));
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true }));
 // app.use(session({ secret: 'keyboard cat' }));
 // Initialize Passport!  Also use passport.session() middleware, to support
 // persistent login sessions (recommended).
