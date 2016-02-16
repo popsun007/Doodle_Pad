@@ -14,11 +14,11 @@ module.exports = function(app, passport) {
       // console.log(req.user);
       if(req.user === undefined)
       {
-          res.redirect("https://mypad.herokuapp.com/partials/chatroom.html");
+          res.redirect("login");
       }
       else
       {
-          res.redirect("login");
+          res.redirect("https://mypad.herokuapp.com/partials/chatroom.html");
       }
     });
 
