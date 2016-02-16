@@ -61,7 +61,7 @@ passport.use(new FacebookStrategy({
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://www.mydoodlepads.com/auth/google/callback"
+    callbackURL: "https://mydoodlepads.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
@@ -112,23 +112,9 @@ route_setter(app, passport);
 
 require('./server/config/socketIo.js')(io);
 
-
-
-
-
 http.listen(process.env.PORT || 8080, function(){
   console.log("chat with doodle pad on port 8888");
 });
-
-// var io = require('socket.io').listen(server);
-
-// // Whenever a connection event happens (the connection event is built in) run the following code
-// io.sockets.on('connection', function (socket) {
-//   console.log("WE ARE USING SOCKETS!");
-//   console.log(socket.id);
-//   //all the socket code goes in here!
-// })
-//  
 
 // Simple route middleware to ensure user is authenticated.
 //   Use this route middleware on any resource that needs to be protected.  If
@@ -136,6 +122,6 @@ http.listen(process.env.PORT || 8080, function(){
 //   the request will proceed.  Otherwise, the user will be redirected to the
 //   login page.
 function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) { window.location = "http://www.mydoodlepads.com/partials/"; }
+  if (req.isAuthenticated()) { return next(); }
   res.redirect('/login');
 }

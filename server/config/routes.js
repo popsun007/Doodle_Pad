@@ -18,7 +18,7 @@ module.exports = function(app, passport) {
       }
       else
       {
-          res.redirect("partials/chatroom.html");
+          res.redirect("/partials/chatroom.html");
       }
     });
 
