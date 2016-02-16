@@ -61,7 +61,7 @@ passport.use(new FacebookStrategy({
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://mydoodlepads.com/auth/google/callback"
+    callbackURL: "https://www.mydoodlepads.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
