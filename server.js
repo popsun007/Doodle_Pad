@@ -39,7 +39,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new FacebookStrategy({
     clientID: FACEBOOK_APP_ID,
     clientSecret: FACEBOOK_APP_SECRET,
-    callbackURL: "https://www.mydoodlepads.com/auth/facebook/callback"
+    callbackURL: "https://mypad.herokuapp.com/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
@@ -61,7 +61,7 @@ passport.use(new FacebookStrategy({
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://www.mydoodlepads.com/auth/google/callback"
+    callbackURL: "https://mydoodlepads.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
