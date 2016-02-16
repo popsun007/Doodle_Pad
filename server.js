@@ -136,6 +136,6 @@ http.listen(process.env.PORT || 8080, function(){
 //   the request will proceed.  Otherwise, the user will be redirected to the
 //   login page.
 function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) { return next(); }
-  res.redirect('/partials');
+  if (req.isAuthenticated()) { window.location = "http://www.mydoodlepads.com/partials/"; }
+  res.redirect('/login');
 }
