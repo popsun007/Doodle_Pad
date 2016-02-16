@@ -18,7 +18,8 @@ module.exports = function(app, passport) {
       }
       else
       {
-          res.redirect("https://mypad.herokuapp.com/partials/chatroom.html");
+      	  console.log("successful login");
+          res.redirect("/partials/chatroom.html");
       }
     });
 

@@ -39,7 +39,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new FacebookStrategy({
     clientID: FACEBOOK_APP_ID,
     clientSecret: FACEBOOK_APP_SECRET,
-    callbackURL: "https://mypad.herokuapp.com/auth/facebook/callback"
+    callbackURL: "https://mydoodlepads.com/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
@@ -113,7 +113,7 @@ route_setter(app, passport);
 require('./server/config/socketIo.js')(io);
 
 http.listen(process.env.PORT || 8080, function(){
-  console.log("chat with doodle pad on port 8888");
+  console.log("chat with doodle pad on port 8080");
 });
 
 // Simple route middleware to ensure user is authenticated.
