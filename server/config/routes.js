@@ -18,7 +18,7 @@ module.exports = function(app, passport) {
       }
       else
       {
-          res.redirect("/partials/chatroom.html");
+          res.redirect("https://mypad.herokuapp.com/partials/chatroom.html");
       }
     });
 
